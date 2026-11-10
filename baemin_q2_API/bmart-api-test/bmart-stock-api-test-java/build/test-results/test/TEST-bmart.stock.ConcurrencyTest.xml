@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="동시성: 피크 타임 동시 주문" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-09T03:06:20.852Z" hostname="ONE1000176N001" time="8.793">
+  <properties/>
+  <testcase name="TC18 재고 1개에 두 고객이 0ms 간격으로 결제하면 1건만 성공한다" classname="bmart.stock.ConcurrencyTest" time="1.603"/>
+  <testcase name="TC18 재고 1개에 두 고객이 10ms 간격으로 결제하면 1건만 성공한다" classname="bmart.stock.ConcurrencyTest" time="1.334"/>
+  <testcase name="TC18 재고 1개에 두 고객이 30ms 간격으로 결제하면 1건만 성공한다" classname="bmart.stock.ConcurrencyTest" time="1.345"/>
+  <testcase name="TC18 재고 1개에 두 고객이 50ms 간격으로 결제하면 1건만 성공한다" classname="bmart.stock.ConcurrencyTest" time="1.89"/>
+  <testcase name="TC19 재고 5개에 20명이 동시에 결제하면 정확히 5건만 성공한다" classname="bmart.stock.ConcurrencyTest" time="0.667"/>
+  <testcase name="TC21 운영자 수정과 주문이 겹치면 도착 순서대로 처리된다 (admin 먼저 → 최종 9)" classname="bmart.stock.ConcurrencyTest" time="0.211"/>
+  <testcase name="TC21 운영자 수정과 주문이 겹치면 도착 순서대로 처리된다 (order 먼저 → 최종 10)" classname="bmart.stock.ConcurrencyTest" time="0.146"/>
+  <testcase name="TC20 남은 재고보다 큰 수량이 동시에 오면 한 건은 수량 부족으로 거절된다" classname="bmart.stock.ConcurrencyTest" time="1.529"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

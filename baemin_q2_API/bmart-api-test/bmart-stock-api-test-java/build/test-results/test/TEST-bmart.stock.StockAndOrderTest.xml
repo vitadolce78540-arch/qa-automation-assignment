@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="정상 케이스: 재고 조회 · 장바구니 · 결제 차감" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-09T03:06:29.648Z" hostname="ONE1000176N001" time="0.747">
+  <properties/>
+  <testcase name="TC08 같은 결제 요청이 재전송되어도 한 번만 차감된다" classname="bmart.stock.StockAndOrderTest" time="0.123"/>
+  <testcase name="TC04 결제 완료 시 주문 수량만큼 즉시 차감" classname="bmart.stock.StockAndOrderTest" time="0.105"/>
+  <testcase name="TC03 장바구니 담기 시점에는 재고가 차감되지 않는다" classname="bmart.stock.StockAndOrderTest" time="0.067"/>
+  <testcase name="TC01 재고 조회 응답 필드와 값" classname="bmart.stock.StockAndOrderTest" time="0.06"/>
+  <testcase name="TC05 재고보다 많이 주문하면 거절되고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.052"/>
+  <testcase name="TC02 존재하지 않는 상품 조회는 404" classname="bmart.stock.StockAndOrderTest" time="0.011"/>
+  <testcase name="TC07 존재하지 않는 상품 주문은 404" classname="bmart.stock.StockAndOrderTest" time="0.008"/>
+  <testcase name="TC06 잘못된 주문 수량(0)은 400이고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.065"/>
+  <testcase name="TC06 잘못된 주문 수량(-1)은 400이고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.08"/>
+  <testcase name="TC06 잘못된 주문 수량(2)은 400이고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.068"/>
+  <testcase name="TC06 잘못된 주문 수량(null)은 400이고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.046"/>
+  <testcase name="TC06 잘못된 주문 수량(1.5)은 400이고 재고는 그대로" classname="bmart.stock.StockAndOrderTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

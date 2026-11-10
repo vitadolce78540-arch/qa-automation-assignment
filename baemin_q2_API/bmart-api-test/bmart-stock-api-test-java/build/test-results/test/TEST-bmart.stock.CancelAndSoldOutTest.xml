@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="품절 전환 · 재고 복구 · 운영자 수정" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-09T03:06:16.921Z" hostname="ONE1000176N001" time="3.828">
+  <properties/>
+  <testcase name="TC14 같은 주문을 두 번 취소해도 재고는 한 번만 복구된다" classname="bmart.stock.CancelAndSoldOutTest" time="2.019"/>
+  <testcase name="TC13 품절 상품을 취소하면 즉시 다른 고객이 구매할 수 있다" classname="bmart.stock.CancelAndSoldOutTest" time="0.278"/>
+  <testcase name="TC10 품절 상품 주문은 SOLD_OUT으로 거절된다" classname="bmart.stock.CancelAndSoldOutTest" time="0.151"/>
+  <testcase name="TC11 품절이 다른 탭에서 조회 중인 고객에게도 즉시 반영된다" classname="bmart.stock.CancelAndSoldOutTest" time="0.368"/>
+  <testcase name="TC12 주문 취소 시 차감된 재고가 즉시 복구된다" classname="bmart.stock.CancelAndSoldOutTest" time="0.327"/>
+  <testcase name="TC09 마지막 재고 주문 시 품절로 전환된다" classname="bmart.stock.CancelAndSoldOutTest" time="0.21"/>
+  <testcase name="TC15 존재하지 않는 주문 취소는 404" classname="bmart.stock.CancelAndSoldOutTest" time="0.04"/>
+  <testcase name="TC17 운영자 재고는 음수로 수정할 수 없다" classname="bmart.stock.CancelAndSoldOutTest" time="0.082"/>
+  <testcase name="TC16 운영자가 재고를 수정하면 즉시 반영되고 품절이 해제된다" classname="bmart.stock.CancelAndSoldOutTest" time="0.347"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
