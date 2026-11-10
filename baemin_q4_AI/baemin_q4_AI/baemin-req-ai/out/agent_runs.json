@@ -1,0 +1,557 @@
+[
+  {
+    "tc_id": "TC-01",
+    "title": "가게 접수 전 '도착 시간 계산 중' 표시",
+    "status": "pass",
+    "reason": "접수 전 '도착 시간 계산 중' 표시 확인",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "예상 도착 시간 영역 문구 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": [
+          {
+            "expected_index": 0,
+            "element": "e8",
+            "property": "text",
+            "match": "exact",
+            "expected": "도착 시간 계산 중",
+            "actual": "도착 시간 계산 중",
+            "passed": true,
+            "element_info": {
+              "text": "도착 시간 계산 중",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/eta_text",
+              "class": "android.widget.TextView"
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "observation": "기대결과 확인 완료",
+        "action": {
+          "type": "finish"
+        },
+        "reason": "기대결과 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": []
+      }
+    ],
+    "verified_expected": [
+      0
+    ]
+  },
+  {
+    "tc_id": "TC-02",
+    "title": "주문 후 5분 이내·접수 대기 상태에서 취소 버튼 노출",
+    "status": "pass",
+    "reason": "접수 대기 상태에서 취소 버튼 노출 확인",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면, 하단에 주문 취소 버튼",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "현재 단계와 취소 버튼 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": [
+          {
+            "expected_index": 0,
+            "element": "e4",
+            "property": "selected",
+            "match": "exact",
+            "expected": "true",
+            "actual": "true",
+            "passed": true,
+            "element_info": {
+              "text": "접수 대기",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/status_step_waiting",
+              "class": "android.widget.TextView"
+            }
+          },
+          {
+            "expected_index": 1,
+            "element": "e14",
+            "property": "text",
+            "match": "exact",
+            "expected": "주문 취소",
+            "actual": "주문 취소",
+            "passed": true,
+            "element_info": {
+              "text": "주문 취소",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/order_cancel_button",
+              "class": "android.widget.Button"
+            }
+          },
+          {
+            "expected_index": 1,
+            "element": "e14",
+            "property": "enabled",
+            "match": "exact",
+            "expected": "true",
+            "actual": "true",
+            "passed": true,
+            "element_info": {
+              "text": "주문 취소",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/order_cancel_button",
+              "class": "android.widget.Button"
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "observation": "기대결과 확인 완료",
+        "action": {
+          "type": "finish"
+        },
+        "reason": "기대결과 2건 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": []
+      }
+    ],
+    "verified_expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "tc_id": "TC-04",
+    "title": "결제 정보에 쿠폰명과 할인 금액 표시",
+    "status": "pass",
+    "reason": "쿠폰명과 할인 금액 표시 확인",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면, 결제 정보 영역",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "쿠폰명 요소 확인",
+        "outcome": "rejected",
+        "note": "현재 화면에 없는 요소: e15",
+        "element": null,
+        "checks": []
+      },
+      {
+        "index": 4,
+        "observation": "직전 확인이 거부됨(e15 없음). 쿠폰명은 e11, 할인은 e12",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "쿠폰명과 할인 금액 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": [
+          {
+            "expected_index": 0,
+            "element": "e11",
+            "property": "text",
+            "match": "contains",
+            "expected": "쿠폰",
+            "actual": "첫 주문 할인 쿠폰",
+            "passed": true,
+            "element_info": {
+              "text": "첫 주문 할인 쿠폰",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/coupon_name",
+              "class": "android.widget.TextView"
+            }
+          },
+          {
+            "expected_index": 1,
+            "element": "e12",
+            "property": "text",
+            "match": "contains",
+            "expected": "1,000원",
+            "actual": "할인 1,000원",
+            "passed": true,
+            "element_info": {
+              "text": "할인 1,000원",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/discount_amount",
+              "class": "android.widget.TextView"
+            }
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "observation": "기대결과 확인 완료",
+        "action": {
+          "type": "finish"
+        },
+        "reason": "기대결과 2건 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": []
+      }
+    ],
+    "verified_expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "tc_id": "TC-05",
+    "title": "할인 금액 음수 기호 표시 형식",
+    "status": "fail",
+    "reason": "기대결과[0] text 기대='할인 -[0-9,]+원' 실제='할인 1,000원'",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면, 할인 금액 '할인 1,000원'",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "정책 CPN-03 형식(음수 기호) 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": [
+          {
+            "expected_index": 0,
+            "element": "e12",
+            "property": "text",
+            "match": "regex",
+            "expected": "할인 -[0-9,]+원",
+            "actual": "할인 1,000원",
+            "passed": false,
+            "element_info": {
+              "text": "할인 1,000원",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/discount_amount",
+              "class": "android.widget.TextView"
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "observation": "할인 금액에 음수 기호가 없음",
+        "action": {
+          "type": "finish"
+        },
+        "reason": "형식 불일치",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": []
+      }
+    ],
+    "verified_expected": []
+  },
+  {
+    "tc_id": "TC-06",
+    "title": "쿠폰 할인 반영 결제 금액",
+    "status": "pass",
+    "reason": "결제 금액 계산 확인",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면, 주문 18,000원 / 배달팁 3,000원 / 할인 1,000원",
+        "action": {
+          "type": "verify"
+        },
+        "reason": "18,000 + 3,000 - 1,000 = 20,000원 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": [
+          {
+            "expected_index": 0,
+            "element": "e13",
+            "property": "text",
+            "match": "exact",
+            "expected": "결제 금액 20,000원",
+            "actual": "결제 금액 20,000원",
+            "passed": true,
+            "element_info": {
+              "text": "결제 금액 20,000원",
+              "desc": "",
+              "resource_id": "com.sampleapp:id/paid_amount",
+              "class": "android.widget.TextView"
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "observation": "기대결과 확인 완료",
+        "action": {
+          "type": "finish"
+        },
+        "reason": "기대결과 확인",
+        "outcome": "done",
+        "note": "",
+        "element": null,
+        "checks": []
+      }
+    ],
+    "verified_expected": [
+      0
+    ]
+  },
+  {
+    "tc_id": "TC-09",
+    "title": "쿠폰 사용 주문 취소 시 전액 환불·쿠폰 복원",
+    "status": "blocked",
+    "reason": "되돌릴 수 없는 동작 차단: '주문 취소' (테스트 환경 허용 필요)",
+    "steps": [
+      {
+        "index": 1,
+        "observation": "홈 화면, 하단 탭바가 보임",
+        "action": {
+          "type": "tap",
+          "element": "e8"
+        },
+        "reason": "주문내역 탭으로 이동",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "하단탭바 주문내역탭",
+          "resource_id": "",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 2,
+        "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+        "action": {
+          "type": "tap",
+          "element": "e3"
+        },
+        "reason": "진행 중 주문을 연다",
+        "outcome": "done",
+        "note": "",
+        "element": {
+          "text": "",
+          "desc": "진행 중 주문, QA테스트치킨, 접수 대기",
+          "resource_id": "com.sampleapp:id/order_item_ongoing",
+          "class": "android.view.View"
+        },
+        "checks": []
+      },
+      {
+        "index": 3,
+        "observation": "주문 현황 화면, 주문 취소 버튼",
+        "action": {
+          "type": "tap",
+          "element": "e14"
+        },
+        "reason": "TC 3단계: 주문 취소 버튼을 누른다",
+        "outcome": "blocked",
+        "note": "되돌릴 수 없는 동작 차단: '주문 취소' (테스트 환경 허용 필요)",
+        "element": {
+          "text": "주문 취소",
+          "desc": "",
+          "resource_id": "com.sampleapp:id/order_cancel_button",
+          "class": "android.widget.Button"
+        },
+        "checks": []
+      }
+    ],
+    "verified_expected": []
+  }
+]

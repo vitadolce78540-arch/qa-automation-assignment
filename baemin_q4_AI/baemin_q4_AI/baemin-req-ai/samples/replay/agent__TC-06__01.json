@@ -1,0 +1,8 @@
+{
+  "observation": "홈 화면, 하단 탭바가 보임",
+  "action": {
+    "type": "tap",
+    "element": "e8"
+  },
+  "reason": "주문내역 탭으로 이동"
+}

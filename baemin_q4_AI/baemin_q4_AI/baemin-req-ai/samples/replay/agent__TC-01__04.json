@@ -1,0 +1,11 @@
+{
+  "observation": "기대결과 확인 완료",
+  "action": {
+    "type": "finish"
+  },
+  "reason": "기대결과 확인",
+  "finish": {
+    "result": "pass",
+    "reason": "접수 전 '도착 시간 계산 중' 표시 확인"
+  }
+}

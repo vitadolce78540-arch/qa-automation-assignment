@@ -1,0 +1,11 @@
+{
+  "observation": "기대결과 확인 완료",
+  "action": {
+    "type": "finish"
+  },
+  "reason": "기대결과 확인",
+  "finish": {
+    "result": "pass",
+    "reason": "결제 금액 계산 확인"
+  }
+}

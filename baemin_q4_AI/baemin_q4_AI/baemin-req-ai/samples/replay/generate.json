@@ -1,0 +1,265 @@
+{
+  "testcases": [
+    {
+      "spec_evidence": "가게가 접수하기 전에는 예상 도착 시간 대신 \"도착 시간 계산 중\"을 표시한다.",
+      "policy_refs": [
+        {
+          "clause_id": "DLV-01",
+          "quote": "예상 도착 시간은 가게가 주문을 접수한 뒤에 산정한다",
+          "relation": "근거"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-01",
+      "requirement_ids": [
+        "R1"
+      ],
+      "type": "기능",
+      "title": "가게 접수 전 '도착 시간 계산 중' 표시",
+      "precondition": "가게가 아직 접수하지 않은 진행 중 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다"
+      ],
+      "expected": [
+        "예상 도착 시간 영역에 '도착 시간 계산 중'이 표시된다"
+      ],
+      "feature_tags": [
+        "eta"
+      ]
+    },
+    {
+      "spec_evidence": "주문 취소 버튼은 주문 후 5분 이내이면서 접수 대기 상태일 때만 노출한다.",
+      "policy_refs": [
+        {
+          "clause_id": "ORD-CANCEL-02",
+          "quote": "주문 후 5분이 지나면 앱에서 직접 취소할 수 없으며 고객센터를 통해 취소한다",
+          "relation": "근거"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-02",
+      "requirement_ids": [
+        "R2"
+      ],
+      "type": "기능",
+      "title": "주문 후 5분 이내·접수 대기 상태에서 취소 버튼 노출",
+      "precondition": "주문 후 2분 경과, 가게 미접수 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다"
+      ],
+      "expected": [
+        "현재 상태가 '접수 대기'로 강조 표시된다",
+        "주문 취소 버튼이 정상적으로 표시된다"
+      ],
+      "feature_tags": [
+        "order_cancel"
+      ]
+    },
+    {
+      "spec_evidence": "주문 취소 버튼은 주문 후 5분 이내이면서 접수 대기 상태일 때만 노출한다.",
+      "policy_refs": [
+        {
+          "clause_id": "ORD-CANCEL-02",
+          "quote": "주문 후 5분이 지나면 앱에서 직접 취소할 수 없으며 고객센터를 통해 취소한다",
+          "relation": "근거"
+        }
+      ],
+      "automatable": false,
+      "id": "TC-03",
+      "requirement_ids": [
+        "R2"
+      ],
+      "type": "정책-경계",
+      "title": "주문 후 5분 경과 시 취소 버튼 미노출",
+      "precondition": "주문 후 5분 1초 경과, 가게 미접수 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다"
+      ],
+      "expected": [
+        "주문 취소 버튼이 표시되지 않는다"
+      ],
+      "feature_tags": [
+        "order_cancel"
+      ],
+      "manual_reason": "주문 후 5분 경과 상태가 필요함. 테스트 데이터 API 로 주문 시각을 조정할 수 있으면 자동화 전환"
+    },
+    {
+      "spec_evidence": "쿠폰이 적용된 주문은 결제 정보에 적용된 쿠폰명과 할인 금액을 표시한다.",
+      "policy_refs": [],
+      "automatable": true,
+      "id": "TC-04",
+      "requirement_ids": [
+        "R3"
+      ],
+      "type": "기능",
+      "title": "결제 정보에 쿠폰명과 할인 금액 표시",
+      "precondition": "쿠폰 1장(1,000원 할인)을 적용한 진행 중 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다",
+        "결제 정보 영역을 확인한다"
+      ],
+      "expected": [
+        "적용된 쿠폰명이 표시된다",
+        "할인 금액 1,000원이 표시된다"
+      ],
+      "feature_tags": [
+        "payment_info",
+        "coupon"
+      ]
+    },
+    {
+      "spec_evidence": "",
+      "policy_refs": [
+        {
+          "clause_id": "CPN-03",
+          "quote": "할인 금액은 원 단위로 표시하고 앞에 음수 기호(-)를 붙인다",
+          "relation": "제약"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-05",
+      "requirement_ids": [
+        "R3"
+      ],
+      "type": "정책-경계",
+      "title": "할인 금액 음수 기호 표시 형식",
+      "precondition": "쿠폰 1장(1,000원 할인)을 적용한 진행 중 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다",
+        "결제 정보 영역을 확인한다"
+      ],
+      "expected": [
+        "할인 금액이 '-1,000원'처럼 음수 기호와 함께 표시된다"
+      ],
+      "feature_tags": [
+        "payment_info",
+        "coupon"
+      ]
+    },
+    {
+      "spec_evidence": "쿠폰이 적용된 주문은 결제 정보에 적용된 쿠폰명과 할인 금액을 표시한다.",
+      "policy_refs": [
+        {
+          "clause_id": "PAY-01",
+          "quote": "결제 금액은 주문 금액과 배달팁의 합에서 할인 금액을 뺀 값이다",
+          "relation": "근거"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-06",
+      "requirement_ids": [
+        "R3"
+      ],
+      "type": "기능",
+      "title": "쿠폰 할인 반영 결제 금액",
+      "precondition": "주문 18,000원, 배달팁 3,000원, 쿠폰 1,000원 할인 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다",
+        "결제 정보 영역을 확인한다"
+      ],
+      "expected": [
+        "결제 금액이 주문 금액 + 배달팁 - 할인 금액인 20,000원으로 표시된다"
+      ],
+      "feature_tags": [
+        "payment_info"
+      ]
+    },
+    {
+      "spec_evidence": "",
+      "policy_refs": [
+        {
+          "clause_id": "CPN-02",
+          "quote": "쿠폰 할인 금액은 배달팁을 제외한 주문 금액을 초과할 수 없다",
+          "relation": "제약"
+        }
+      ],
+      "automatable": false,
+      "id": "TC-07",
+      "requirement_ids": [
+        "R3"
+      ],
+      "type": "정책-경계",
+      "title": "주문 금액보다 큰 할인 쿠폰 적용 시 할인 상한",
+      "precondition": "주문 금액 5,000원에 10,000원 할인 쿠폰을 적용한 주문",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다",
+        "결제 정보 영역을 확인한다"
+      ],
+      "expected": [
+        "할인 금액이 주문 금액 5,000원까지만 적용되어 '-5,000원'으로 표시된다"
+      ],
+      "feature_tags": [
+        "payment_info",
+        "coupon"
+      ],
+      "manual_reason": "주문 금액보다 큰 할인 쿠폰과 주문 데이터가 필요함. 테스트 데이터 API 가 있으면 자동화 전환"
+    },
+    {
+      "spec_evidence": "쿠폰을 여러 장 적용한 주문은 적용된 쿠폰명을 모두 표시한다.",
+      "policy_refs": [
+        {
+          "clause_id": "CPN-01",
+          "quote": "쿠폰은 주문 1건당 최대 3장까지 사용할 수 있다",
+          "relation": "근거"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-08",
+      "requirement_ids": [
+        "R4"
+      ],
+      "type": "기능",
+      "title": "쿠폰 2장 적용 시 쿠폰명 모두 표시",
+      "precondition": "쿠폰 2장을 적용한 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다"
+      ],
+      "expected": [
+        "적용한 쿠폰 2장의 이름이 모두 표시된다"
+      ],
+      "feature_tags": [
+        "coupon"
+      ]
+    },
+    {
+      "spec_evidence": "",
+      "policy_refs": [
+        {
+          "clause_id": "ORD-CANCEL-03",
+          "quote": "주문 취소 시 결제 수단으로 전액 환불하고, 사용한 쿠폰은 유효기간이 남아 있으면 복원한다",
+          "relation": "제약"
+        }
+      ],
+      "automatable": true,
+      "id": "TC-09",
+      "requirement_ids": [
+        "R2"
+      ],
+      "type": "정책-예외",
+      "title": "쿠폰 사용 주문 취소 시 전액 환불·쿠폰 복원",
+      "precondition": "주문 후 2분 경과, 쿠폰 1장 적용, 가게 미접수 주문 1건",
+      "steps": [
+        "주문내역 탭을 누른다",
+        "진행 중인 주문을 누른다",
+        "주문 취소 버튼을 누른다",
+        "취소 확인 후 결제 내역과 쿠폰함을 확인한다"
+      ],
+      "expected": [
+        "결제 금액 전액 환불 내역이 표시된다",
+        "사용한 쿠폰이 쿠폰함에 다시 표시된다"
+      ],
+      "feature_tags": [
+        "order_cancel",
+        "coupon"
+      ]
+    }
+  ]
+}

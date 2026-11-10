@@ -1,0 +1,30 @@
+{
+  "observation": "주문 현황 화면, 하단에 주문 취소 버튼",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "현재 단계와 취소 버튼 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e4",
+      "property": "selected",
+      "match": "exact",
+      "expected": "true"
+    },
+    {
+      "expected_index": 1,
+      "element": "e14",
+      "property": "text",
+      "match": "exact",
+      "expected": "주문 취소"
+    },
+    {
+      "expected_index": 1,
+      "element": "e14",
+      "property": "enabled",
+      "match": "exact",
+      "expected": "true"
+    }
+  ]
+}

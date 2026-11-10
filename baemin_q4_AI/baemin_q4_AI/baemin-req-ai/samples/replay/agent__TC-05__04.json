@@ -1,0 +1,11 @@
+{
+  "observation": "할인 금액에 음수 기호가 없음",
+  "action": {
+    "type": "finish"
+  },
+  "reason": "형식 불일치",
+  "finish": {
+    "result": "fail",
+    "reason": "할인 금액이 '1,000원'으로 표시되어 음수 기호(-)가 없음 (정책 CPN-03 위반)"
+  }
+}

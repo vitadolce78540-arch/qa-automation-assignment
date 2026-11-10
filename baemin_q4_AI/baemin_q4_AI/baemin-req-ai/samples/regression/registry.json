@@ -1,0 +1,95 @@
+{
+  "_comment": "기존 회귀 스크립트 메타데이터. 영향 분석은 이 정보만 보고 실행 대상을 고른다.",
+  "feature_vocabulary": [
+    "home",
+    "order_history",
+    "order_status_entry",
+    "status_steps",
+    "eta",
+    "order_cancel",
+    "payment_info",
+    "coupon"
+  ],
+  "scripts": [
+    {
+      "id": "S01",
+      "path": "test_order_status_entry.py",
+      "title": "주문내역에서 주문 현황 진입",
+      "feature_tags": [
+        "order_history",
+        "order_status_entry"
+      ],
+      "policy_clauses": [],
+      "asserted_texts": [
+        "주문 현황"
+      ]
+    },
+    {
+      "id": "S02",
+      "path": "test_status_steps.py",
+      "title": "주문 상태 4단계 표시와 현재 단계 강조",
+      "feature_tags": [
+        "status_steps"
+      ],
+      "policy_clauses": [],
+      "asserted_texts": [
+        "접수 대기",
+        "조리 중",
+        "배달 중",
+        "배달 완료"
+      ]
+    },
+    {
+      "id": "S03",
+      "path": "test_eta_before_accept.py",
+      "title": "가게 접수 전 예상 도착 시간 문구",
+      "feature_tags": [
+        "eta"
+      ],
+      "policy_clauses": [
+        "DLV-01"
+      ],
+      "asserted_texts": [
+        "가게 확인 중"
+      ]
+    },
+    {
+      "id": "S04",
+      "path": "test_cancel_button.py",
+      "title": "접수 대기 상태 주문 취소 버튼 노출",
+      "feature_tags": [
+        "order_cancel"
+      ],
+      "policy_clauses": [
+        "ORD-CANCEL-01"
+      ],
+      "asserted_texts": [
+        "주문 취소"
+      ]
+    },
+    {
+      "id": "S05",
+      "path": "test_payment_amount.py",
+      "title": "결제 금액 계산 표시",
+      "feature_tags": [
+        "payment_info"
+      ],
+      "policy_clauses": [
+        "PAY-01"
+      ],
+      "asserted_texts": [
+        "결제 금액 20,000원"
+      ]
+    },
+    {
+      "id": "S06",
+      "path": "test_home_tabs.py",
+      "title": "홈 하단 탭바 노출",
+      "feature_tags": [
+        "home"
+      ],
+      "policy_clauses": [],
+      "asserted_texts": []
+    }
+  ]
+}

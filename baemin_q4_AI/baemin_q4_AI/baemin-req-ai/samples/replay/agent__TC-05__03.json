@@ -1,0 +1,16 @@
+{
+  "observation": "주문 현황 화면, 할인 금액 '할인 1,000원'",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "정책 CPN-03 형식(음수 기호) 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e12",
+      "property": "text",
+      "match": "regex",
+      "expected": "할인 -[0-9,]+원"
+    }
+  ]
+}

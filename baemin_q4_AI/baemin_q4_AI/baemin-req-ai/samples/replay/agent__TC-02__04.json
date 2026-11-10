@@ -1,0 +1,11 @@
+{
+  "observation": "기대결과 확인 완료",
+  "action": {
+    "type": "finish"
+  },
+  "reason": "기대결과 2건 확인",
+  "finish": {
+    "result": "pass",
+    "reason": "접수 대기 상태에서 취소 버튼 노출 확인"
+  }
+}

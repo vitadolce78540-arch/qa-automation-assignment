@@ -1,0 +1,8 @@
+{
+  "observation": "주문내역 화면, 진행 중 주문(QA테스트치킨, 접수 대기)이 보임",
+  "action": {
+    "type": "tap",
+    "element": "e3"
+  },
+  "reason": "진행 중 주문을 연다"
+}

@@ -1,0 +1,11 @@
+{
+  "observation": "기대결과 확인 완료",
+  "action": {
+    "type": "finish"
+  },
+  "reason": "기대결과 2건 확인",
+  "finish": {
+    "result": "pass",
+    "reason": "쿠폰명과 할인 금액 표시 확인"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "observation": "직전 확인이 거부됨(e15 없음). 쿠폰명은 e11, 할인은 e12",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "쿠폰명과 할인 금액 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e11",
+      "property": "text",
+      "match": "contains",
+      "expected": "쿠폰"
+    },
+    {
+      "expected_index": 1,
+      "element": "e12",
+      "property": "text",
+      "match": "contains",
+      "expected": "1,000원"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "observation": "주문 현황 화면, 주문 18,000원 / 배달팁 3,000원 / 할인 1,000원",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "18,000 + 3,000 - 1,000 = 20,000원 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e13",
+      "property": "text",
+      "match": "exact",
+      "expected": "결제 금액 20,000원"
+    }
+  ]
+}

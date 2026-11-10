@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 가상 화면: 주문내역 탭 (QA 빌드에서 testTag 가 resource-id 로 노출된다고 가정) -->
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="com.sampleapp:id/order_history_screen" class="android.widget.FrameLayout" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[0,0][1080,2340]">
+    <node index="0" text="주문내역" resource-id="com.sampleapp:id/screen_title" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,110][400,190]"/>
+    <node index="1" text="" resource-id="com.sampleapp:id/order_list" class="android.view.View" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="true" selected="false" bounds="[0,220][1080,2075]">
+      <node index="0" text="" resource-id="com.sampleapp:id/order_item_ongoing" class="android.view.View" package="com.sampleapp" content-desc="진행 중 주문, QA테스트치킨, 접수 대기" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[40,240][1040,480]">
+        <node index="0" text="QA테스트치킨" resource-id="com.sampleapp:id/order_store_name" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[70,270][600,330]"/>
+        <node index="1" text="접수 대기" resource-id="com.sampleapp:id/order_item_status" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[70,350][300,400]"/>
+      </node>
+      <node index="1" text="" resource-id="com.sampleapp:id/order_item_done" class="android.view.View" package="com.sampleapp" content-desc="지난 주문, 동네분식, 배달 완료" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[40,500][1040,740]">
+        <node index="0" text="동네분식" resource-id="com.sampleapp:id/order_store_name" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[70,530][600,590]"/>
+        <node index="1" text="배달 완료" resource-id="com.sampleapp:id/order_item_status" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[70,610][300,660]"/>
+      </node>
+    </node>
+  </node>
+</hierarchy>

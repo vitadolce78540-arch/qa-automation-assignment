@@ -1,0 +1,8 @@
+{
+  "observation": "주문 현황 화면, 주문 취소 버튼",
+  "action": {
+    "type": "tap",
+    "element": "e14"
+  },
+  "reason": "TC 3단계: 주문 취소 버튼을 누른다"
+}

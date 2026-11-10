@@ -1,0 +1,16 @@
+{
+  "observation": "주문 현황 화면, 결제 정보 영역",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "쿠폰명 요소 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e15",
+      "property": "text",
+      "match": "contains",
+      "expected": "쿠폰"
+    }
+  ]
+}

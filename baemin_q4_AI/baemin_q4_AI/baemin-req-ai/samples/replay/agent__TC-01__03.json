@@ -1,0 +1,16 @@
+{
+  "observation": "주문 현황 화면",
+  "action": {
+    "type": "verify"
+  },
+  "reason": "예상 도착 시간 영역 문구 확인",
+  "checks": [
+    {
+      "expected_index": 0,
+      "element": "e8",
+      "property": "text",
+      "match": "exact",
+      "expected": "도착 시간 계산 중"
+    }
+  ]
+}

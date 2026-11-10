@@ -1,0 +1,18 @@
+{
+  "_comment": "가상 앱(v2 빌드) 화면 전이. 키는 'desc:<content-desc>', 'id:<resource-id>', 'text:<text>' 중 하나",
+  "start": "home",
+  "screens": {
+    "home": {
+      "xml": "home.xml",
+      "transitions": {"desc:하단탭바 주문내역탭": "order_history"}
+    },
+    "order_history": {
+      "xml": "order_history.xml",
+      "transitions": {"id:com.sampleapp:id/order_item_ongoing": "order_status"}
+    },
+    "order_status": {
+      "xml": "order_status.xml",
+      "transitions": {"desc:뒤로가기": "@back"}
+    }
+  }
+}

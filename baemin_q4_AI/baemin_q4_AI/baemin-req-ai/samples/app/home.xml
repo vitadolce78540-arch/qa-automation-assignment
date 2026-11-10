@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 실기기(S24 Ultra) 배민 홈 화면에서 확인한 요소 일부를 UiAutomator 덤프 형식으로 옮긴 것 -->
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="com.sampleapp:id/containerLayout" class="android.widget.FrameLayout" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[0,0][1080,2340]">
+    <node index="0" text="" resource-id="" class="android.widget.Button" package="com.sampleapp" content-desc="회사, 현재 위치를 변경할 수 있습니다." checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[53,97][621,239]"/>
+    <node index="1" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="장바구니" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[970,139][1033,202]"/>
+    <node index="2" text="" resource-id="" class="android.widget.Button" package="com.sampleapp" content-desc="음식배달" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[26,680][223,822]"/>
+    <node index="3" text="" resource-id="" class="android.widget.Button" package="com.sampleapp" content-desc="픽업" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[223,680][346,822]"/>
+    <node index="4" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="음식배달에서 더보기" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[365,1382][716,1508]"/>
+    <node index="5" text="" resource-id="com.sampleapp:id/bottomTabBar" class="androidx.compose.ui.platform.ComposeView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[0,2075][1080,2214]">
+      <node index="0" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="하단탭바 홈탭" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="true" bounds="[0,2075][216,2212]"/>
+      <node index="1" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="하단탭바 찜탭" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[432,2075][648,2212]"/>
+      <node index="2" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="하단탭바 주문내역탭" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[648,2075][864,2212]"/>
+      <node index="3" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="하단탭바 마이배민탭" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[864,2075][1080,2212]"/>
+    </node>
+  </node>
+</hierarchy>

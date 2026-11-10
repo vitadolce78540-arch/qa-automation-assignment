@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 가상 화면: 실시간 주문 현황 v2 빌드 (접수 대기, 주문 후 2분 경과, 쿠폰 1장 적용)
+     결함 주입: 할인 금액 앞에 음수 기호(-)가 없음 → 정책 CPN-03 위반 -->
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="com.sampleapp:id/order_status_screen" class="android.widget.FrameLayout" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[0,0][1080,2340]">
+    <node index="0" text="" resource-id="" class="android.view.View" package="com.sampleapp" content-desc="뒤로가기" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[20,100][140,200]"/>
+    <node index="1" text="주문 현황" resource-id="com.sampleapp:id/screen_title" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[160,110][560,190]"/>
+    <node index="2" text="QA테스트치킨" resource-id="com.sampleapp:id/order_store_name" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,230][700,300]"/>
+    <node index="3" text="" resource-id="com.sampleapp:id/status_steps" class="android.view.View" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,320][1040,520]">
+      <node index="0" text="접수 대기" resource-id="com.sampleapp:id/status_step_waiting" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="true" bounds="[40,420][280,480]"/>
+      <node index="1" text="조리 중" resource-id="com.sampleapp:id/status_step_cooking" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[290,420][530,480]"/>
+      <node index="2" text="배달 중" resource-id="com.sampleapp:id/status_step_delivering" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[540,420][780,480]"/>
+      <node index="3" text="배달 완료" resource-id="com.sampleapp:id/status_step_done" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[790,420][1040,480]"/>
+    </node>
+    <node index="4" text="도착 시간 계산 중" resource-id="com.sampleapp:id/eta_text" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,560][700,640]"/>
+    <node index="5" text="주문 금액 18,000원" resource-id="com.sampleapp:id/order_amount" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,700][1040,760]"/>
+    <node index="6" text="배달팁 3,000원" resource-id="com.sampleapp:id/delivery_tip" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,770][1040,830]"/>
+    <node index="7" text="첫 주문 할인 쿠폰" resource-id="com.sampleapp:id/coupon_name" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,840][700,900]"/>
+    <node index="8" text="할인 1,000원" resource-id="com.sampleapp:id/discount_amount" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,910][1040,970]"/>
+    <node index="9" text="결제 금액 20,000원" resource-id="com.sampleapp:id/paid_amount" class="android.widget.TextView" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" scrollable="false" selected="false" bounds="[40,980][1040,1050]"/>
+    <node index="10" text="주문 취소" resource-id="com.sampleapp:id/order_cancel_button" class="android.widget.Button" package="com.sampleapp" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" scrollable="false" selected="false" bounds="[40,2100][1040,2220]"/>
+  </node>
+</hierarchy>
